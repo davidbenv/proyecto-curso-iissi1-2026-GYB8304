@@ -3,7 +3,7 @@
 ## Miembros del grupo L7-XXX-X (sustituir)
 
 1. Benítez Villarejo, David
-1. Núñez Múñoz, Iker
+1. Núñez Muñoz, Iker
 1. Donaire Minguet, Juan
 1. Fung Chirinos, Steven
 
