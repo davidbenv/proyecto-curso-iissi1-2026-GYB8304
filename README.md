@@ -9,7 +9,7 @@
 
 ## 1. Introducción al problema
 
-- Actualemnte, en la industria del cine se requieren sistemas de informacion dinamicos, eficientes y para los usuarios. Con este proyecto vamos a integrar un sistema de gestion para el cine moderno.
+- Actualmente, en la industria del cine se requieren sistemas de informacion dinamicos, eficientes y para los usuarios. Con este proyecto vamos a integrar un sistema de gestion para el cine moderno.
 Los problemas principales es resolver la digitalizacion y automatizacion de procesos comerciales y administrativos de dicha industria. Con esto abarcamos administración de cartelera, la programacion de la sesion por sala, reparto de artista y la venta de entradas interactiva con el usuario. Los usuarios podrán ver la cartelera, reservar butacas de forma segura y online, y valorar las peliculas vistas.
 Para garantizar la viabilidad del sistema en un entorno real, es crítico evitar errores como la sobreventa de entradas (asentar dos reservas sobre la misma butaca en la misma sesión) o el solapamiento de horarios (programar dos sesiones simultáneas en una misma sala). Por tanto, se requiere un modelo conceptual riguroso apoyado por restricciones declarativas y triggers en la capa de datos.
 
