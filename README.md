@@ -15,7 +15,25 @@ Para garantizar la viabilidad del sistema en un entorno real, es crítico evitar
 
 ## 2. Glosario de términos
 
-- Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
+- **Administrador:** Usuario encargado de gestionar la programación del cine. Programa las sesiones asignando película, sala, fecha y precio.
+- **Artista:** Persona que participa en una película (por ejemplo, actor, actriz o director). Se identifica por su nombre, apellido y nacionalidad. Cada película tiene al menos un artista y un artista puede participar en varias películas.
+- **Butaca:** Asiento individual de una sala, identificado por su fila y su número. Es la unidad que el espectador reserva.
+- **Cancelación:** Acción por la que una reserva pasa a estado Cancelada y sus butacas vuelven a quedar libres. Solo se permite con una antelación mínima de 2 horas respecto al inicio de la sesión (R.N.03).
+- **Cartelera:** Conjunto de películas que el cine ofrece al público, junto con las sesiones programadas de cada una.
+- **Clasificación de edad:** Edad mínima recomendada para ver una película: todos los públicos (TP), mayores de 7, 12, 16 o 18 años.
+- **Código de reserva:** Identificador único que el sistema genera automáticamente al crear una reserva. Permite al espectador identificar sus entradas.
+- **Descuento por grupo:** Rebaja automática del 10% sobre el precio total de una reserva que incluye 4 o más butacas (R.N.04).
+- **Espectador:** Usuario que consulta la cartelera, reserva butacas, paga y cancela reservas y valora películas.
+- **Estado de reserva:** Situación en la que se encuentra una reserva. *Pendiente*: creada y todavía sin pagar. *Pagada*: confirmada tras el pago. *Cancelada*: anulada, con sus butacas libres de nuevo.
+- **Participación:** Indica el rol que tuvo y la descripción (opcional) que describe la intervención del artista en la película.
+- **Película:** Obra cinematográfica que se proyecta en el cine. Tiene título, argumento, duración, clasificación de edad y géneros.
+- **Puntuación:** Valor entero de 0 a 5 que un espectador asigna a una película al valorarla.
+- **Reserva:** Operación por la que un espectador aparta una o varias butacas de una sesión. Tiene un código único, una fecha de compra, un estado y un precio calculado.
+- **Sala:** Espacio físico donde se proyectan las sesiones. Tiene número, capacidad y un conjunto de butacas.
+- **Sesión:** Proyección de una película en una sala, en una fecha y hora concretas y con un precio. En una sala no puede haber dos sesiones al mismo tiempo (R.N.01) y una película no puede tener más de 4 sesiones al día (R.N.02).
+- **Tiempo de limpieza:** Margen que se deja entre dos sesiones de una misma sala para prepararla. Se suma a la duración de la película al calcular el intervalo que ocupa una sesión.
+- **Usuario:** Persona registrada en el sistema, con email, contraseña, nombre, apellido y fecha de nacimiento. Puede ser espectador o administrador.
+- **Valoración:** Opinión de un espectador sobre una película: una puntuación, un comentario opcional y la fecha. Cada espectador solo puede valorar una vez la misma película.
 
 ## 3. Visión general del sistema
 - El Sistema de Gestión de Cine permite organizar las salas, las películas y las sesiones, y que los espectadores reserven sus butacas en tiempo real sin que se solapen horarios. Además, los espectadores pueden valorar las películas que han visto.
