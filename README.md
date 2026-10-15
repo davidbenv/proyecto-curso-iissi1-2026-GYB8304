@@ -148,11 +148,11 @@ A continuación, se definen los distintos perfiles de usuario (actores) que inte
 - La nota media no se almacena: se calcula como la media de las puntuaciones recibidas, o nula si no hay ninguna.
 
 #### R.I.03. Información de artistas
-**Historia de usuario:** Como administrador quiero que el sistema almacene los artistas para indicar quién participa en cada película.
+**Historia de usuario:** Como administrador quiero que el sistema almacene la participación de los artistas en la película.
 
 **Prueba de aceptación:**
 - Se almacenan nombre, apellido y nacionalidad.
-- Cada película tiene al menos un artista; un artista puede participar en varias películas.
+- Cada película tiene al menos una participación de un artista; un artista puede participar en varias películas.
 
 #### R.I.04. Información de salas
 **Historia de usuario:** Como administrador quiero que el sistema almacene las salas para programar sesiones en ellas.
