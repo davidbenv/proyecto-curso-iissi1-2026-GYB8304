@@ -39,6 +39,22 @@ Para garantizar la viabilidad del sistema en un entorno real, es crítico evitar
 - El Sistema de Gestión de Cine permite organizar las salas, las películas y las sesiones, y que los espectadores reserven sus butacas en tiempo real sin que se solapen horarios. Además, los espectadores pueden valorar las películas que han visto.
 
 ### 3.1. Requisitos generales
+Los requisitos generales establecen las metas de alto nivel y las capacidades globales que debe ofrecer la plataforma para cumplir con los objetivos del negocio:
+
+- **Administración de Infraestructura y Programación:**
+  - El sistema debe gestionar la configuración física del cine (salas y handbutacas) y permitir la planificación y programación de sesiones de proyección garantizando que no existan conflictos horarios en una misma sala.
+
+- **Venta y Reserva Online de Entradas:**
+  - La plataforma debe ofrecer una interfaz gráfica e interactiva que permita al cliente seleccionar libremente sus asientos, calculando automáticamente el importe total de la reserva.
+
+- **Gestión del Catálogo y Ficha Artística:**
+  - El sistema debe permitir mantener actualizado el catálogo de películas, almacenando la sinopsis, género de la película, clasificación por edad, duración y la participación de los artistas.
+
+- **Gestión de la Reputación y Feedback:**
+  - El sistema debe recopilar la opinión de los usuarios mediante un sistema de puntuación (de 0 a 5 estrellas) y comentarios, calculando y actualizando automáticamente la nota media global de cada película.
+
+- **Garantía de Reglas y Políticas de Negocio:**
+  - La plataforma debe hacer cumplir de forma automatizada las políticas del cine, tales como el control estricto del aforo, los márgenes operativos de limpieza entre sesiones, los límites de reserva por compra y los plazos temporales permitidos para cancelaciones.
 
 ### 3.2. Usuarios del sistema
 A continuación, se definen los distintos perfiles de usuario (actores) que interactúan con el sistema, especificando sus responsabilidades, nivel de acceso y las funciones principales que pueden realizar dentro de la plataforma:
