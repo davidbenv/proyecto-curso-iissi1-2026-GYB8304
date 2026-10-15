@@ -1,4 +1,4 @@
-# Título Proyecto
+# Gestión reservas de Cine
 
 ## Miembros del grupo L7-XXX-X (sustituir)
 
