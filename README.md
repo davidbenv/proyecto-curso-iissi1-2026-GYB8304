@@ -42,7 +42,10 @@ Para garantizar la viabilidad del sistema en un entorno real, es crítico evitar
 Los requisitos generales establecen las metas de alto nivel y las capacidades globales que debe ofrecer la plataforma para cumplir con los objetivos del negocio:
 
 - **Administración de Infraestructura y Programación:**
-  - El sistema debe gestionar la configuración física del cine (salas y handbutacas) y permitir la planificación y programación de sesiones de proyección garantizando que no existan conflictos horarios en una misma sala.
+  - Como **administrador** del cine **quiero**:
+        Programar y planificar las sesiones y salas del cine.
+  - **Para**:
+        Gestionar la configuración física del cine y evitar conflictos horarios en una misma sala.
 
 - **Venta y Reserva Online de Entradas:**
   - La plataforma debe ofrecer una interfaz gráfica e interactiva que permita al cliente seleccionar libremente sus asientos, calculando automáticamente el importe total de la reserva.
