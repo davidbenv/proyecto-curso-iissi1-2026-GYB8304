@@ -227,21 +227,46 @@ Las valoraciones deben ser enteros de 0 a 5.
 
 ### 5.2. Escenarios de prueba
 
+#### Escenario 1: Reserva de grupo con descuento e integración de aforo
+
+El espectador "McLovin" realiza una reserva de 4 butacas para la sesión de las 18:00 h de la película "Inception" en la Sala 1. El sistema calcula el importe aplicando un 10% de descuento (R.N.04) y descuenta 4 asientos del total de butacas disponibles de la sesión.
+
+**IMAGEN DEL DIAGRAMA DE OBJETOS UML**
+
+#### Escenario 2: Valoración de película y recálculo de nota media
+
+Dos espectadores ("McLovin" y "John Cena") emiten sus respectivas opiniones sobre la película "Inception". El sistema registra ambas valoraciones e invoca la propiedad derivada `Pelicula./notaMedia`, obteniendo un promedio de 4.5.
+
+**IMAGEN DEL DIAGRAMA DE OBJETOS UML**
+
 - con descripción textual y diagrama de objetos UML.
 
 ## 6. Matrices de trazabilidad
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
+|       | Usuario    | Pelicula   | Artista    | Sala/Butaca| 
 |:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+| RI-1  | X          |            |            |            |
+| RI-2  |            | X          |            |            |
+| RI-3  |            | X          | X          |            |
+| RI-4  |            |            |            | X          |
+| RI-5  |            |            |            | X          |
+| RI-6  |            | X          |            | X          |
+| RI-7  | X          |            |            | X          |
+| RI-8  | X          | X          |            |            |
+| RF.1  | X          | X          |            | X          |
+| RF-2  | X          |            |            | X          |
+| RF-3  | X          |            |            |            |
+| RF-4  | X          |            |            |            |
+| RF-5  | X          | X          |            |            |
+| RF-6  | X          | X          |            | X          |
+| RN-1  |            | X          |            | X          |
+| RN-2  |            |            |            |            |
+| RN-3  |            |            |            |            |
+| RN-4  |            |            |            |            |
+| RN-5  |            |            |            |            |
+
 
 -- fin entregable 2 --
 
