@@ -9,31 +9,12 @@
 
 ## 1. Introducción al problema
 
-- Actualmente, en la industria del cine se requieren sistemas de informacion dinamicos, eficientes y para los usuarios. Con este proyecto vamos a integrar un sistema de gestion para el cine moderno.
-Los problemas principales es resolver la digitalizacion y automatizacion de procesos comerciales y administrativos de dicha industria. Con esto abarcamos administración de cartelera, la programacion de la sesion por sala, reparto de artista y la venta de entradas interactiva con el usuario. Los usuarios podrán ver la cartelera, reservar butacas de forma segura y online, y valorar las peliculas vistas.
+- Actualmente, en la industria del cine se requieren sistemas de información dinámicos, eficientes y para los usuarios. Con este proyecto vamos a integrar un sistema de gestión para el cine moderno.
+Los problemas principales es resolver la digitalización y automatización de procesos comerciales y administrativos de dicha industria. Con esto abarcamos administración de cartelera, la programación de la sesión por sala, reparto de artista y la venta de entradas interactiva con el usuario. Los usuarios podrán ver la cartelera, reservar butacas de forma segura y online, y valorar las películas vistas.
 Para garantizar la viabilidad del sistema en un entorno real, es crítico evitar errores como la sobreventa de entradas (asentar dos reservas sobre la misma butaca en la misma sesión) o el solapamiento de horarios (programar dos sesiones simultáneas en una misma sala). Por tanto, se requiere un modelo conceptual riguroso apoyado por restricciones declarativas y triggers en la capa de datos.
 
 ## 2. Glosario de términos
-
-- **Administrador:** Usuario encargado de gestionar la programación del cine. Programa las sesiones asignando película, sala, fecha y precio.
-- **Artista:** Persona que participa en una película (por ejemplo, actor, actriz o director). Se identifica por su nombre, apellido y nacionalidad. Cada película tiene al menos un artista y un artista puede participar en varias películas.
-- **Butaca:** Asiento individual de una sala, identificado por su fila y su número. Es la unidad que el espectador reserva.
-- **Cancelación:** Acción por la que una reserva pasa a estado Cancelada y sus butacas vuelven a quedar libres. Solo se permite con una antelación mínima de 2 horas respecto al inicio de la sesión (R.N.03).
-- **Cartelera:** Conjunto de películas que el cine ofrece al público, junto con las sesiones programadas de cada una.
-- **Clasificación de edad:** Edad mínima recomendada para ver una película: todos los públicos (TP), mayores de 7, 12, 16 o 18 años.
-- **Código de reserva:** Identificador único que el sistema genera automáticamente al crear una reserva. Permite al espectador identificar sus entradas.
-- **Descuento por grupo:** Rebaja automática del 10% sobre el precio total de una reserva que incluye 4 o más butacas (R.N.04).
-- **Espectador:** Usuario que consulta la cartelera, reserva butacas, paga y cancela reservas y valora películas.
-- **Estado de reserva:** Situación en la que se encuentra una reserva. *Pendiente*: creada y todavía sin pagar. *Pagada*: confirmada tras el pago. *Cancelada*: anulada, con sus butacas libres de nuevo.
-- **Participación:** Indica el rol que tuvo y la descripción (opcional) que describe la intervención del artista en la película.
-- **Película:** Obra cinematográfica que se proyecta en el cine. Tiene título, argumento, duración, clasificación de edad y géneros.
-- **Puntuación:** Valor entero de 0 a 5 que un espectador asigna a una película al valorarla.
-- **Reserva:** Operación por la que un espectador aparta una o varias butacas de una sesión. Tiene un código único, una fecha de compra, un estado y un precio calculado.
-- **Sala:** Espacio físico donde se proyectan las sesiones. Tiene número, capacidad y un conjunto de butacas.
-- **Sesión:** Proyección de una película en una sala, en una fecha y hora concretas y con un precio. En una sala no puede haber dos sesiones al mismo tiempo (R.N.01) y una película no puede tener más de 4 sesiones al día (R.N.02).
-- **Tiempo de limpieza:** Margen que se deja entre dos sesiones de una misma sala para prepararla. Se suma a la duración de la película al calcular el intervalo que ocupa una sesión.
-- **Usuario:** Persona registrada en el sistema, con email, contraseña, nombre, apellido y fecha de nacimiento. Puede ser espectador o administrador.
-- **Valoración:** Opinión de un espectador sobre una película: una puntuación, un comentario opcional y la fecha. Cada espectador solo puede valorar una vez la misma película.
+Ningún término no trivial.
 
 ## 3. Visión general del sistema
 - El Sistema de Gestión de Cine permite organizar las salas, las películas y las sesiones, y que los espectadores reserven sus butacas en tiempo real sin que se solapen horarios. Además, los espectadores pueden valorar las películas que han visto.
@@ -60,7 +41,7 @@ Los requisitos generales establecen las metas de alto nivel y las capacidades gl
   - La plataforma debe hacer cumplir de forma automatizada las políticas del cine, tales como el control estricto del aforo, los márgenes operativos de limpieza entre sesiones, los límites de reserva por compra y los plazos temporales permitidos para cancelaciones.
 
 ### 3.2. Usuarios del sistema
-A continuación, se definen los distintos perfiles de usuario (actores) que interactúan con el sistema, especificando sus responsabilidades, nivel de acceso y las funciones principales que pueden realizar dentro de la plataforma:
+A continuación, se definen los distintos perfiles de usuario que interactúan con el sistema, especificando sus responsabilidades, nivel de acceso y las funciones principales que pueden realizar dentro de la plataforma:
 
 | Perfil / Actor | Descripción | Permisos y Responsabilidades |
 | :--- | :--- | :--- |
@@ -73,15 +54,27 @@ A continuación, se definen los distintos perfiles de usuario (actores) que inte
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Consultar sesiones y butacas disponibles
-**Historia de usuario:** Como espectador quiero ver las sesiones de una película y las butacas libres de cada una para elegir cuándo ir y dónde sentarme.
+#### R.F.001. Crear sesiones
+Como administrador quiero crear las distintas sesiones que tendrán lugar cada día para que los espectadores puedan consultarlas y hacer una reserva.
 
-**Prueba de aceptación:**
-- Se muestran fecha, sala, tipo de pantalla, precio y número de butacas disponibles de cada sesión.
+**Pruebas de aceptación:**
+- Se muestran fecha, sala, precio y número de butacas disponibles de cada sesión.
 - Solo se listan sesiones futuras.
 - Se muestran fila y número de las butacas.
-- Las butacas con una reserva Pendiente o Pagada para esa sesión aparecen como no seleccionables.
-- Las butacas con una reserva Cancelada aparecen como libres.
+
+#### R.F.002. Consultar sesiones
+Como espectador quiero ver las sesiones disponibles para saber cuándo puedo ir a ver una película.
+
+#### R.F.003. Actualizar sesiones
+Como administrador quiero modificar los datos de las sesiones ya creadas para poder cambiar su información.
+
+#### R.F.004. Cancelar sesiones
+Como administrador quiero poder cancelar las sesiones para poder cambiar la fecha de la misma o poder cancelarla ante casos de emergencia.
+
+#### R.F.005.
+
+#### R.F.01. Consultar sesiones y butacas disponibles
+**Historia de usuario:** Como espectador quiero ver las sesiones de una película y las butacas libres de cada una para elegir cuándo ir y dónde sentarme.
 
 #### R.F.02. Reservar butacas
 **Historia de usuario:** Como espectador quiero seleccionar una o varias butacas de una sesión y reservarlas para asegurar mi asiento.
