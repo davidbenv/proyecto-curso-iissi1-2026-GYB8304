@@ -11,7 +11,7 @@
 
 - La gestión operativa de un cine requiere coordinar en tiempo real la cartelera, la programación de sesiones por sala, el reparto de películas y la venta de entradas. Cuando estos procesos se administran de forma manual, surgen problemas críticos como la sobreventa de asientos o el conflicto de horarios en una misma sala.
 
-Para solucionar esta problemática, desarrollamos un sistema de administración del cine que ofrece a los espectadores una plataforma web interactiva para consultar la cartelera, seleccionar y reservar sus asientos, realizar pagos y valorar las películas.
+-Para solucionar esta problemática, desarrollamos un sistema de administración del cine que ofrece a los espectadores una plataforma web interactiva para consultar la cartelera, seleccionar y reservar sus asientos, realizar pagos y valorar las películas.
 
 ## 2. Glosario de términos
 Ningún término no trivial.
