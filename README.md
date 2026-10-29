@@ -11,7 +11,7 @@
 
 - La gestión operativa de un cine requiere coordinar en tiempo real la cartelera, la programación de sesiones por sala, el reparto de películas y la venta de entradas. Cuando estos procesos se administran de forma manual, surgen problemas críticos como la sobreventa de asientos o el conflicto de horarios en una misma sala.
 
--Para solucionar esta problemática, desarrollamos un sistema de administración del cine que ofrece a los espectadores una plataforma web interactiva para consultar la cartelera, seleccionar y reservar sus asientos, realizar pagos y valorar las películas.
+- Para solucionar esta problemática, desarrollamos un sistema de administración del cine que ofrece a los espectadores una plataforma web interactiva para consultar la cartelera, seleccionar y reservar sus asientos, realizar pagos y valorar las películas.
 
 ## 2. Glosario de términos
 Ningún término no trivial.
@@ -118,7 +118,7 @@ Como administrador quiero poder cancelar las sesiones para poder cambiar la fech
 - No se puede modificar ni eliminar una sesión que tenga reservas Pendientes o Pagadas.
 - Se deben aplicar las reglas de negocio R.N.01 y R.N.02.
 
-#### 4.1.1. Requisitos de información
+### 4.1.1. Requisitos de información
 
 #### R.I.01. Información de usuarios
 **Historia de usuario:** Como administrador quiero que el sistema almacene los datos de los usuarios para identificarlos y gestionar su acceso.
@@ -180,7 +180,7 @@ Como administrador quiero poder cancelar las sesiones para poder cambiar la fech
 - Se almacenan puntuación (entero de 0 a 5), comentario (opcional) y fecha.
 - Cada valoración pertenece a un espectador y a una película, y no puede haber dos del mismo espectador para la misma película.
 
-#### 4.1.2. Reglas de negocio
+### 4.1.2. Reglas de negocio
 
 #### R.N.01. No solapamiento de sesiones en una sala
 En una sala no puede haber dos sesiones al mismo tiempo. El intervalo ocupado por una sesión es su hora de inicio más la duración de la película más el tiempo de limpieza.
