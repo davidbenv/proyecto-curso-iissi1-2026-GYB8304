@@ -9,46 +9,40 @@
 
 ## 1. Introducción al problema
 
-- Actualmente, en la industria del cine se requieren sistemas de información dinámicos, eficientes y para los usuarios. Con este proyecto vamos a integrar un sistema de gestión para el cine moderno.
-Los problemas principales es resolver la digitalización y automatización de procesos comerciales y administrativos de dicha industria. Con esto abarcamos administración de cartelera, la programación de la sesión por sala, reparto de artista y la venta de entradas interactiva con el usuario. Los usuarios podrán ver la cartelera, reservar butacas de forma segura y online, y valorar las películas vistas.
-Para garantizar la viabilidad del sistema en un entorno real, es crítico evitar errores como la sobreventa de entradas (asentar dos reservas sobre la misma butaca en la misma sesión) o el solapamiento de horarios (programar dos sesiones simultáneas en una misma sala). Por tanto, se requiere un modelo conceptual riguroso apoyado por restricciones declarativas y triggers en la capa de datos.
+- La gestión operativa de un cine requiere coordinar en tiempo real la cartelera, la programación de sesiones por sala, el reparto de películas y la venta de entradas. Cuando estos procesos se administran de forma manual, surgen problemas críticos como la sobreventa de asientos o el conflicto de horarios en una misma sala.
+
+Para solucionar esta problemática, desarrollamos un sistema de administración del cine que ofrece a los espectadores una plataforma web interactiva para consultar la cartelera, seleccionar y reservar sus asientos, realizar pagos y valorar las películas.
 
 ## 2. Glosario de términos
 Ningún término no trivial.
 
 ## 3. Visión general del sistema
-- El Sistema de Gestión de Cine permite organizar las salas, las películas y las sesiones, y que los espectadores reserven sus butacas en tiempo real sin que se solapen horarios. Además, los espectadores pueden valorar las películas que han visto.
 
 ### 3.1. Requisitos generales
-Los requisitos generales establecen las metas de alto nivel y las capacidades globales que debe ofrecer la plataforma para cumplir con los objetivos del negocio:
 
-- **Administración de Infraestructura y Programación:**
-  - Como **administrador** del cine **quiero**:
-        Programar y planificar las sesiones y salas del cine.
-  - **Para**:
-        Gestionar la configuración física del cine y evitar conflictos horarios en una misma sala.
+- **Gestión de Infraestructura:**
+  - Como **administrador** del cine quiero planificar las sesiones y salas del cine, para
+    gestionar la configuración física del cine y evitar conflictos horarios en una misma sala.
 
-- **Venta y Reserva Online de Entradas:**
-  - La plataforma debe ofrecer una interfaz gráfica e interactiva que permita al cliente seleccionar libremente sus asientos, calculando automáticamente el importe total de la reserva.
+- **Reserva Online de Entradas:**
+  - La plataforma debe ofrecer una interfaz interactiva que permita al cliente seleccionar sus asientos, calculando             automáticamente el precio total de la reserva.
 
 - **Gestión del Catálogo y Ficha Artística:**
-  - El sistema debe permitir mantener actualizado el catálogo de películas, almacenando la sinopsis, género de la película, clasificación por edad, duración y la participación de los artistas.
+  - Como **administrador** quiero actualizar el catálogo de películas, almacenando la sinopsis, género de la película,          clasificación por edad, duración y la participación de los artistas.
 
-- **Gestión de la Reputación y Feedback:**
-  - El sistema debe recopilar la opinión de los usuarios mediante un sistema de puntuación (de 0 a 5 estrellas) y comentarios, calculando y actualizando automáticamente la nota media global de cada película.
+- **Gestión de Valoración:**
+  - El sistema debe recopilar la opinión de los usuarios mediante un sistema de puntuación (de 0 a 5 estrellas) y               comentarios, calculando y actualizando automáticamente la nota media de cada película.
 
-- **Garantía de Reglas y Políticas de Negocio:**
-  - La plataforma debe hacer cumplir de forma automatizada las políticas del cine, tales como el control estricto del aforo, los márgenes operativos de limpieza entre sesiones, los límites de reserva por compra y los plazos temporales permitidos para cancelaciones.
+- **Garantía de Reglas:**
+  - La plataforma debe hacer cumplir el control estricto del aforo, los márgenes minimos de limpieza entre sesiones,            los límites de reservas por compra.
 
 ### 3.2. Usuarios del sistema
-A continuación, se definen los distintos perfiles de usuario que interactúan con el sistema, especificando sus responsabilidades, nivel de acceso y las funciones principales que pueden realizar dentro de la plataforma:
 
-| Perfil / Actor | Descripción | Permisos y Responsabilidades |
-| :--- | :--- | :--- |
-| **Visitante**<br>*(Cliente No Registrado)* | Usuario casual que accede a la plataforma web o móvil sin autenticarse. | • Consultar la cartelera de películas en proyección.<br>• Visualizar detalles de las fichas técnicas, sinopsis, géneros y repartos.<br>• Consultar los horarios y el aforo disponible de las sesiones. |
-| **Cliente Registrado**<br>*(Usuario)* | Espectador que cuenta con una cuenta personal autenticada en la plataforma. | • Todos los permisos del rol **Visitante**.<br>• Seleccionar asientos en el mapa interactivo de la sala.<br>• Realizar la reserva y compra online de entradas.<br>• Consultar su historial personal de compras y descargar entradas.<br>• Solicitar la cancelación de reservas dentro del plazo permitido.<br>• Registrar puntuaciones (0 a 5 estrellas) y comentarios en las películas. |
-| **Gestor del Cine**<br>*(Administrador)* | Personal interno autorizado responsable de la gestión comercial y operativa del cine. | • Dar de alta, editar o retirar películas del catálogo general.<br>• Configurar las salas, su capacidad total y el tipo de sus asientos.<br>• Programar las sesiones de proyección (asociando película, sala, fecha, hora y precio base).<br>• Supervisar la ocupación global de las salas y los reportes de recaudación. |
-
+| Perfil / Actor | Descripción | 
+| :--- | :--- |
+| **Visitante**<br>*(Cliente No Registrado)* | Usuario casual que accede a la plataforma web o móvil sin autenticarse. |
+| **Cliente Registrado**<br>*(Usuario)* | Espectador que cuenta con una cuenta personal autenticada en la plataforma. |
+| **Gestor del Cine**<br>*(Administrador)* | Personal interno autorizado responsable de la gestión comercial y operativa del cine. |
 
 ## 4. Catálogo de requisitos
 
