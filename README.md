@@ -231,14 +231,14 @@ Las valoraciones deben ser enteros de 0 a 5.
 
 El espectador "McLovin" realiza una reserva de 4 butacas para la sesión de las 18:00 h de la película "Inception" en la Sala 1. El sistema calcula el importe aplicando un 10% de descuento (R.N.04) y descuenta 4 asientos del total de butacas disponibles de la sesión.
 
-**IMAGEN DEL DIAGRAMA DE OBJETOS UML**
 <img width="669" height="606" alt="diagrama_Objetos" src="https://github.com/user-attachments/assets/5b172d7b-a1b6-4bff-9cdb-2ffab2fc467c" />
+
 
 #### Escenario 2: Valoración de película y recálculo de nota media
 
 Dos espectadores ("McLovin" y "John Cena") emiten sus respectivas opiniones sobre la película "Inception". El sistema registra ambas valoraciones e invoca la propiedad derivada `Pelicula./notaMedia`, obteniendo un promedio de 4.5.
 
-**IMAGEN DEL DIAGRAMA DE OBJETOS UML**
+
 <img width="1134" height="663" alt="diagrama" src="https://github.com/user-attachments/assets/e0a08fa0-6480-44f3-96ad-cf158befd498" />
 
 - con descripción textual y diagrama de objetos UML.
