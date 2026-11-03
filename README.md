@@ -223,7 +223,8 @@ Las valoraciones deben ser enteros de 0 a 5.
 
 ### 5.1. Diagramas de clases UML
 
-- con restricciones.
+<img width="1252" height="1252" alt="Modelado_conceptual_proyecto1" src="https://github.com/user-attachments/assets/e1a4ef28-ed46-4611-9f7e-5ecaefbe2c8d" />
+
 
 ### 5.2. Escenarios de prueba
 
