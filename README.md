@@ -232,6 +232,7 @@ Las valoraciones deben ser enteros de 0 a 5.
 El espectador "McLovin" realiza una reserva de 4 butacas para la sesión de las 18:00 h de la película "Inception" en la Sala 1. El sistema calcula el importe aplicando un 10% de descuento (R.N.04) y descuenta 4 asientos del total de butacas disponibles de la sesión.
 
 **IMAGEN DEL DIAGRAMA DE OBJETOS UML**
+<img width="840" height="566" alt="DiagramaDeObjetoEscenario2" src="https://github.com/user-attachments/assets/1f88c089-a01b-4639-8377-8cf69688d269" />
 
 #### Escenario 2: Valoración de película y recálculo de nota media
 
